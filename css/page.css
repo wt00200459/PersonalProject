@@ -1,0 +1,324 @@
+/*Global CSS variables*/
+:root {
+    --header-color: rgb(0, 0, 0);
+    --max-title-size: 3em;
+    --mid-title-size: 2em;
+    --min-title-size: 1.5em;
+    --max-sectionHeader-size: 1.5em;
+    --mid-sectionHeader-size: 1.2em;
+    --min-sectionHeader-size: 1em;
+   
+}
+html{
+    background-image:url('../images/bg.png');
+   
+}
+
+/*Defaul style*/
+.me{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+}
+.index{
+    
+    color: rgb(79, 172, 79);
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+    
+}
+nav {
+    display: flex;
+    align-items: center;
+    margin: 22px auto;
+    flex-wrap: wrap;
+}
+nav li {
+    
+    float: left;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+    text-decoration: none;
+    
+}
+
+.mainMenu a:link, .mainMenu a:visited{
+    color: coral;    
+    display: block;
+    margin-bottom: 0;
+    padding: 0.3em 0.3em;
+    text-align: center;
+    width: 5em;
+    text-decoration: none;
+}
+
+
+.iconMenu, .contactLogo{
+    width: 48px;
+    height: 48px;
+    
+    
+}
+img, video {
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+a:visited {
+    color: coral;
+}
+#entersite{
+    background-color: #686464;
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+}
+body {
+    /*Google web font*/
+    font-family: 'Kanit', 'Montserrat', sans-serif;
+    line-height: 1.3em;    
+    margin: 20px auto;
+    padding: 1em 1em;
+    width: 88%;
+    
+ 
+    
+}
+nav li:hover{
+    border: solid green;
+}
+header {
+    color: rgb(79, 172, 79);
+    
+}
+aside{
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+}
+.sectionin:hover {
+    border: solid green;
+}
+section {
+    border: solid #d1d1d1;
+    padding: 0.22em 0.88em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+}
+.sectionHeader {
+    color: rgb(36, 111, 196);
+}
+footer {
+    grid-area: footer;
+    min-height: 41px;
+    color:rgb(0, 0, 0);
+    font-size: var(--min-sectionHeader-size);
+    text-align: center;    
+    width: 100%;
+    align-items: center;
+    list-style: none;
+    margin-left: 0;
+    border: solid #d1d1d1;
+    padding: 0.22em 0em;
+    box-shadow: 8px 8px 2px #e7e7e7;
+    border-radius: 11px;
+}
+/*Just declare the grid-area*/
+#books{
+    grid-area: books;
+}
+#me {
+    grid-area: me;
+}
+#contact {
+    grid-area: contact;
+}
+/*Responsive design*/
+@media screen and (max-width: 359px) {
+    .mainb {
+        display: grid;
+        grid-gap: 1.2em;
+        margin: 10px auto 10px auto;
+    }
+    .maina {
+        display: grid;
+        grid-template-areas:
+             "books"
+             "me"
+            "contact";
+        grid-gap: 1.2em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    article {
+        display: grid;
+        grid-gap: 1em;
+    }
+    header {
+        margin-bottom: 0.6em;
+        font-size: var(--min-title-size);
+    }
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+        text-align: center;
+    }
+    .textMenu {
+        display: none;
+    }
+    .foota {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+    }
+    .sectionImg {
+        display: none;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
+   
+}
+@media screen and (min-width: 360px) and (max-width: 619px){
+    .mainb {
+        display: grid;
+        grid-gap: 1.2em;
+        margin: 10px auto 10px auto;
+    }
+    .maina {
+        display: grid;
+        grid-template: auto / 2fr ;
+        grid-template-areas:
+            "books"
+            "me"
+            "contact"
+            "footer";
+        grid-gap: 1.2em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    #conimg{
+        display:none;
+    }
+    article {
+        display: grid;
+        grid-gap: 1em;
+    }
+    header {
+        margin-bottom: 0.6em;
+        font-size: var(--min-title-size);
+    }
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+        text-align: center;
+    }
+    .foota {
+        display: grid;
+        grid-template-rows: 1fr ;
+    }
+    .contactLogo {
+        width: 48px;
+        height: 48px;
+    }
+   
+}
+@media screen and (min-width: 620px) and (max-width: 959px){
+    .mainb {
+        display: grid;
+        grid-gap: 1.2em;
+        margin: 10px auto 10px auto;
+    }
+    .maina {
+        display: grid;
+        grid-template: auto / 2fr 2fr ;
+        grid-template-areas:
+            "books me"
+            "contact contact"
+            "footer footer" ;
+        grid-gap: 1.5em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+    #conimg{
+        display:none;
+    }
+    article {
+        display: grid;
+        grid-gap: 1em;
+    }
+    header {
+        margin-bottom: 0.8em;
+        font-size: var(--mid-title-size);
+    }
+    .sectionHeader {
+        font-size: var(--min-sectionHeader-size);
+        text-align: center;
+    }
+    .foota {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .contactLogo {
+        width: 66px;
+        height: 66px;
+    }
+   
+}
+@media screen and (min-width: 960px){
+    .mainb {
+        display: grid;
+        grid-template: auto / 3fr 1.5fr;
+        grid-gap: 1.5em;
+        margin: 33px auto 33px auto;
+    }
+    .maina{
+        display: grid;
+        grid-template: auto / 2fr 2fr 2fr ;
+        grid-template-areas:   
+            "books me contact"
+            "footer footer footer ";
+        grid-gap: 1.5em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+    article {
+        display: grid;
+        grid-gap: 1.5em;
+    }
+    header {
+        margin-bottom: 1em;
+        font-size: var(--max-title-size);
+    }
+    .sectionHeader {
+        font-size: var(--max-sectionHeader-size);
+    }
+    .foota {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .contactLogo {
+        width: 88px;
+        height: 88px;
+    }
+}
+
